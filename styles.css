@@ -17,7 +17,6 @@ header {
   color: #ffffff;
   padding: 16px 24px;
 
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -290,3 +289,54 @@ Flex-Row:
 
 
 */
+
+/* Extra Assignment part 1 */
+#show-menu , #hide-menu  {
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+#closeicon ,#menuicon
+{
+    display: none;
+}
+
+
+
+
+@media (max-width: 700px) {
+    #menuitems {
+        display: none;
+    }
+    #show-menu , #menuicon {
+        display: block;
+    }
+
+#show-menu:checked ~ #menuitems ,#show-menu:checked ~ #closeicon  {
+    display: block;
+}
+#show-menu:checked ~ #menuicon {
+    display: none;
+}
+nav:has(#hide-menu:checked) #menuicon , nav:has(#hide-menu:checked) #show-menu {
+    display: block;
+}
+nav:has(#hide-menu:checked) #menuitems
+{
+    display: none;
+}
+nav:has(#hide-menu:checked) #closeicon
+{
+    display: none;
+}
+
+
+}
+
+
+
+
+
+/* Extra Assignment part 2 */
